@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: gem-bid-notifier
+    env: python
+    schedule: "*/30 * * * *"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python gem_notifier.py"
